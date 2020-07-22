@@ -14,3 +14,10 @@ git rm -r --cached target              # 删除target文件夹
 git commit -m '删除了target'        # 提交,添加操作说明
 再push
 ```
+
+运行命令
+``` js
+npm i 
+nodemon server.js  
+
+```
