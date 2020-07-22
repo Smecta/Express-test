@@ -1,0 +1,52 @@
+@uri = http://localhost:4000/
+@uriapi = http://localhost:4000/api/
+@json = Content-Type:application/json
+
+### 所有用户
+GET  {{uriapi}}users
+###
+POST {{uriapi}}
+
+###注册
+POST {{uriapi}}register
+{{json}}
+
+{
+    "username":"user3",
+    "password":"123456"
+}
+###登录
+POST {{uriapi}}login
+{{json}}
+
+{
+    "username":"user3",
+    "password":"123456"
+}
+
+### 个人信息
+GET {{uriapi}}profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlMDc4N2ZiNWZkZGJlMDg4N2RhOGQyNCIsImlhdCI6MTU3NzU1Mjk5OX0.LKh7caZi7SWs13rm523p_vmtXhYylxYGLIzu150SOhw
+
+###
+GET {{uri}}products
+###
+GET {{uri}}products/5e0636c3182d8d2b6053242c
+###
+POST {{uri}}products
+Content-Type: application/json
+
+{
+    "title":"产品4"
+}
+
+###
+PUT {{uri}}products/5e0636c3182d8d2b6053242c
+Content-Type: application/json
+
+{
+    "title":"产品5"
+}
+
+###
+DELETE {{uri}}products/5e076cc412a16606bb7a9ea5
